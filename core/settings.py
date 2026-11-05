@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv(str("SECRET_KEY"))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv(bool("DEBUG"))
+DEBUG = bool(os.getenv("DEBUG"))
 
-ALLOWED_HOSTS = os.getenv(str("ALLOWED_HOSTS").split(",")) # ["127",]
+ALLOWED_HOSTS = os.getenv(str("ALLOWED_HOSTS")).split(",") # ["127",]
 
 
 # Application definition
@@ -50,6 +50,9 @@ LIBRARY_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',  
+    'modeltranslation',
+    'django_filters',
+    'drf_yasg',
     
 ]
 
