@@ -22,11 +22,17 @@ from .schema import swagger_urlpatterns
 
 
 urlpatterns = [
-    path("i18n/", include("django.conf.urls.i18n")),
+    path("i18n/", include("django.conf.urls.i18n")), 
+    path('admin/', admin.site.urls),
 ]
 
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        path('rosetta/', include('rosetta.urls'))
+    ]
+
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
 )
 
 # swagger
