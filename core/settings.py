@@ -186,3 +186,28 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 from .jazzmin_conf import JAZZMIN_SETTINGS # noqa
 
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": ("core.authentication.SwaggerFriendlyJWTAuthentication",),
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
+
+from .jwt_config import _SIMPLE_JWT # noqa
+
+SIMPLE_JWT = _SIMPLE_JWT
+
+SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False,
+    "PERSIST_AUTH": True,
+    "SECURITY_DEFINITIONS": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT authorization header. Example: `Bearer <access_token>`",
+        }
+    },
+}
+
+
+

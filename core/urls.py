@@ -21,6 +21,8 @@ from django.conf import settings
 from .schema import swagger_urlpatterns
 
 
+
+
 urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")), 
     path('admin/', admin.site.urls),
@@ -32,7 +34,8 @@ if 'rosetta' in settings.INSTALLED_APPS:
     ]
 
 urlpatterns += i18n_patterns(
-    # path('admin/', admin.site.urls),
+    path('api/v1/accounts/', include('apps.accounts.urls')),
+    path('api/v1/courses/', include('apps.courses.urls')),
 )
 
 # swagger
