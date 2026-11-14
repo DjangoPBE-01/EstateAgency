@@ -1,3 +1,21 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:venv"
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "material-icon-theme.folders.customClones": [
+  {
+    "name": "users-admin",
+    "base": "admin",
+    "color": "light-green-500",
+    "lightColor": "light-green-700",
+    "folderNames": ["accounts"],
+    "rootFolderNames": ["accounts"]
+  },
+  {
+    "name": "roles-admin",
+    "base": "admin",
+    "color": "purple-400",
+    "folderNames": ["roles"],
+    "rootFolderNames": ["users"]
+  }
+],
+
 }

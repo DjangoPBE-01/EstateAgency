@@ -60,6 +60,10 @@ LIBRARY_APPS = [
 
 APP_APPS = [
     
+    'apps.base',
+    'apps.accounts',
+    'apps.courses',
+    
 ]
 
 INSTALLED_APPS += LIBRARY_APPS
@@ -174,6 +178,9 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 from .jazzmin_conf import JAZZMIN_SETTINGS # noqa
