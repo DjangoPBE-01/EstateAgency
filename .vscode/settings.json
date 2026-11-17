@@ -10,11 +10,11 @@
     "rootFolderNames": ["accounts"]
   },
   {
-    "name": "roles-admin",
+    "name": "manager",
     "base": "admin",
-    "color": "purple-400",
-    "folderNames": ["roles"],
-    "rootFolderNames": ["users"]
+    "color": "red-400",
+    "folderNames": ["management"],
+    "rootFolderNames": ["management"]
   }
 ],
 

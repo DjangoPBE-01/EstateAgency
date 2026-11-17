@@ -14,6 +14,7 @@ dependencies = [
     "djangorestframework==3.18.3",
     "djangorestframework_simplejwt==5.5.1",
     "drf-yasg>=1.21.18",
+    "faker>=40.54.0",
     "pillow==13.0.0",
     "psycopg2==2.9.13",
     "PyJWT==2.15.1",
